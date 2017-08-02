@@ -6,13 +6,13 @@ FIRST_IFACE=1 && CHECK_CURRENT_REPO=1 . <(curl -sL https://raw.githubusercontent
 unset FIRST_IFACE
 unset CHECK_CURRENT_REPO
 # Change DNS
-if ! [ -x "$(command -v resolvconf)" ]
-then
-    apt install resolvconf -y -q
-    dpkg-reconfigure resolvconf
-fi
-echo "nameserver 8.8.8.8" > /etc/resolvconf/resolv.conf.d/base
-echo "nameserver 8.8.4.4" >> /etc/resolvconf/resolv.conf.d/base
+#if ! [ -x "$(command -v resolvconf)" ]
+#then
+#    apt install resolvconf -y -q
+#    dpkg-reconfigure resolvconf
+#fi
+#echo "nameserver 8.8.8.8" > /etc/resolvconf/resolv.conf.d/base
+#echo "nameserver 8.8.4.4" >> /etc/resolvconf/resolv.conf.d/base
 
 # Check network
 if ! [ -x "$(command -v nslookup)" ]
